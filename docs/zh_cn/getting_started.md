@@ -1,6 +1,6 @@
 # 快速入门
 
-- [安装指引](#安装指引)
+- [安装教程](#安装教程)
 - [数据准备](#数据准备)
 - [人体模型下载 (可选)](#人体模型下载-可选)
 - [推理](#推理)
@@ -8,22 +8,22 @@
 - [训练](#训练)
 - [更多教程](#更多教程)
 
-## 安装指引
+## 安装教程
 
-请参阅[安装教程](./installation.md)。
+请参阅[详情](./installation.md)
 
 ## 数据准备
 
-请参阅[数据说明](./dataset_preparation.md)。
+请参阅[详情](./dataset_preparation.md)
 
 ## 人体模型下载 (可选)
 
-本代码库可以输出人体的3d关键点和SMPL模型，若你需要得到SMPL模型，则需要准备如下模型，反之不需要。
+本代码库可以输出人体的 3d 关键点和 SMPL 模型，若你需要得到 SMPL 模型，则需要准备如下模型，反之不需要。
 
-- 我们使用v1.0.0版本的SMPL，请注册以获取下载文件的权限。
+- 我们使用 v1.0.0 版本的 SMPL，请注册以获取下载文件的权限。
   - 从 [SMPL](https://smpl.is.tue.mpg.de/) 下载男性和女性的模型，从 [SMPLify](https://smplify.is.tue.mpg.de/) 下载中性的模型。
   - 所有的模型都需要重命名为 `SMPL_{GENDER}.pkl` 的形式，比如将 `basicModel_neutral_lbs_10_207_0_v1.0.0.pkl` 重命名为 `SMPL_NEUTRAL.pkl`。
-- 从 [here](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/smpl_mean_params.npz) 下载  `smpl_mean_params.npz` 文件。
+- 从[这里](https://openmmlab-share.oss-cn-hangzhou.aliyuncs.com/mmhuman3d/models/smpl_mean_params.npz)下载  `smpl_mean_params.npz` 文件。
 - 从 smplify-x 下载 [gmm_08.zip](https://github.com/vchoutas/smplify-x/files/3295771/gmm_08.zip) 文件，或者从 openxrlab 下载 [gmm_08.pkl](https://openxrlab-share-mainland.oss-cn-hangzhou.aliyuncs.com/xrmocap/weight/gmm_08.pkl) 文件。
 
 下载上述文件，并将它们按以下文件结构排列:
@@ -63,18 +63,18 @@ sh scripts/download_weight.sh
 
 ### 单人推理
 
-目前，我们只提供基于优化方法的单人3d关键点和SMPL估计。
+目前，我们只提供基于优化方法的单人 3d 关键点和 SMPL 估计。
 
-1. 下载人体模型，具体步骤请参阅[下载说明](#人体模型下载)。
-2. Download a 7z file from [humman dataset](https://drive.google.com/drive/folders/17dinze70MWL5PmB9-Mw36zUjkrQvwb-J).
-3. Extract the 7z file.
+1. 下载人体模型，具体步骤请参阅[下载说明](#人体模型下载)
+2. 从 [humman dataset](https://drive.google.com/drive/folders/17dinze70MWL5PmB9-Mw36zUjkrQvwb-J) 下载一个压缩文件
+3. 解压已下载的压缩文件
 
 ```bash
 cd xrmocap_data/humman
 7z x p000127_a000007.7z
 ```
 
-3. Run [process_smc](./tools/process_smc.md) tool.
+4. 运行 [process_smc](./tools/process_smc.md) 工具
 
 ```bash
 python tools/process_smc.py \
@@ -87,11 +87,11 @@ python tools/process_smc.py \
 
 ### 多人推理
 
-您可以从 [here](https://openxrlab-share-mainland.oss-cn-hangzhou.aliyuncs.com/xrmocap/example_resources/Shelf_50.zip) 下载一个用于快速演示的小型测试数据集。它包含从 Shelf 数据集挑选的5个视角的50帧图像序列以及标定的相机参数。
+您可以从[这里](https://openxrlab-share-mainland.oss-cn-hangzhou.aliyuncs.com/xrmocap/example_resources/Shelf_50.zip)下载一个用于快速演示的小型测试数据集，它包含从 Shelf 数据集挑选的5个视角的50帧图像序列以及标定的相机参数。
 
 #### 基于优化的方法
 
-基于优化的方法使用匹配后多视角的2d关键点，借助三角化或其他方法可以生成3d关键点。以 [MVPose](../../configs/mvpose/) 为例，您可以通过以下步骤得到3d关键点。
+基于优化的方法使用匹配后多视角的 2d 关键点，借助三角化或其他方法可以生成 3d 关键点。以 [MVPose](../../configs/mvpose/) 为例，您可以通过以下步骤得到 3d 关键点。
 
 1. 下载数据和人体模型
 
@@ -161,7 +161,7 @@ For detailed tutorials about dataset preparation, model weights and checkpoints 
 sh scripts/download_weight.sh
 ```
 
-### 使用单卡或多卡GPU进行测评
+### 使用单卡或多卡 GPU 进行测评
 
 #### 基于优化的方法
 
@@ -303,7 +303,7 @@ For learning-based methods, more details about dataset preparation, model weight
 
 ## 更多教程
 
-- [Introduction](./tutorials/introduction.md)
+- [XRMoCap简介](./tutorials/introduction.md)
 - [Config](./tutorials/config.md)
 - [New dataset](./tutorials/new_dataset.md)
 - [New module](./tutorials/new_module.md)

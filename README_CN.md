@@ -1,29 +1,47 @@
+<br/>
+
+<div align="center">
+    <img src="resources/xrmocap-logo.png" width="600"/>
+</div>
+
+<br/>
+
+<div align="center">
+
+[![Documentation](https://readthedocs.org/projects/xrmocap/badge/?version=latest)](https://xrmocap.readthedocs.io/en/latest/?badge=latest)
+[![actions](https://github.com/openxrlab/xrmocap/workflows/build/badge.svg)](https://github.com/openxrlab/xrmocap/actions)
+[![codecov](https://codecov.io/gh/openxrlab/xrmocap/branch/main/graph/badge.svg)](https://codecov.io/gh/openxrlab/xrmocap)
+[![PyPI](https://img.shields.io/pypi/v/xrmocap)](https://pypi.org/project/xrmocap/)
+[![Percentage of issues still open](https://isitmaintained.com/badge/open/openxrlab/xrmocap.svg)](https://github.com/openxrlab/xrmocap/issues)
+
+</div>
+
 ## 简介
 
 简体中文 | [English](README.md)
 
-XRMoCap是一款基于PyTorch的多视角动作捕捉开源代码库，是[OpenXRLab](https://openxrlab.org.cn/)项目成员之一。
+XRMoCap是一款基于PyTorch的多视角动作捕捉开源代码库，是 [OpenXRLab](https://openxrlab.org.cn/) 项目成员之一。
 
-如果您对单视角动作捕捉感兴趣，请参考[mmhuman3d](https://github.com/open-mmlab/mmhuman3d)了解更多细节。
+如果您对单视角动作捕捉感兴趣，请参考 [mmhuman3d](https://github.com/open-mmlab/mmhuman3d) 了解更多细节。
 
 https://user-images.githubusercontent.com/26729379/187710195-ba4660ce-c736-4820-8450-104f82e5cc99.mp4
 
-详细介绍见[概述](docs/zh_cn/tutorials/introduction.md)。
+详情参见 [XRMoCap 简介](docs/zh_cn/tutorials/introduction.md)。
 
 
 ### 主要特征
 
-- **支持流行的多目单人及多目多人动作捕捉方法**
+- **支持流行的多目单人和多目多人动作捕捉方法**
 
-  XRMoCap重新实现了从单人到多人的多视角动作捕捉SOTA方法，支持任意数目大于2的标定相机，并提供自动选择相机的有效策略。
+  重新实现了从单人到多人的多视角动作捕捉 SOTA 方法，支持任意数目大于2的标定相机，并提供自动选择相机的有效策略。
 
 - **支持基于关键点和参数化人体模型的多视角动捕算法**
 
-  XRMoCap支持两种主流运动表示方法，即keypoints3d和SMPL(-X)，并提供它们之间的转换和优化的工具。
+  支持两种主流运动表示方法，即 3d 关键点和 SMPL(-X)，并提供它们之间的转换和优化的工具。
 
 - **将基于优化和基于学习的方法集成在模块化框架中**
 
-  XRMoCap对整体框架进行模块化设计，将基于优化和基于学习的方法集成在一个框架中。用户可通过在配置文件选择不同的模块，轻松地创建指定的多视角动作捕捉管线。
+  整体框架进行模块化设计，将基于优化和基于学习的方法集成在一个框架中。用户可通过在配置文件选择不同的模块，轻松地创建指定的多视角动作捕捉管线。
 
 ## 最新进展
 
@@ -96,11 +114,9 @@ https://user-images.githubusercontent.com/26729379/187710195-ba4660ce-c736-4820-
 
 ## 致谢
 
-XRMoCap是一个由学术界和工业界的研究人员和工程师共同贡献的开源项目。
-我们感谢所有为该项目提供算法复现和新功能支持的贡献者，以及提供宝贵反馈的用户。
-我们希望该工具箱和基准测试能够为社区提供一个灵活的代码工具，供用户复现现有方法和开发自己的新模型，从而不断为开源社区提供贡献。
+XRMoCap 是一个由学术界和工业界的研究人员和工程师共同贡献的开源项目。我们感谢所有为该项目提供算法复现和新功能支持的贡献者，以及提供宝贵反馈的用户。我们希望该工具箱和基准测试能够为社区提供一个灵活的代码工具，供用户复现现有方法和开发自己的新模型，从而不断为开源社区提供贡献。
 
-## Projects in OpenXRLab
+## OpenXRLab 中的项目
 
 - [XRPrimer](https://github.com/openxrlab/xrprimer): 用于 XR 相关算法的 OpenXRLab 基础库。
 - [XRSLAM](https://github.com/openxrlab/xrslam): OpenXRLab 视觉惯性 SLAM 工具箱和测试基准。

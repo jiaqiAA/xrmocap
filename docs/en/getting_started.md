@@ -77,7 +77,7 @@ cd xrmocap_data/humman
 7z x p000127_a000007.7z
 ```
 
-3. Run [process_smc](./tools/process_smc.md) tool.
+4. Run [process_smc](./tools/process_smc.md) tool.
 
 ```bash
 python tools/process_smc.py \
