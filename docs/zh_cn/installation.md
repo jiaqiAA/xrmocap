@@ -150,4 +150,4 @@ docker run --gpus all --shm-size=8g -it -v {DATA_DIR}:/xrmocap/data openxrlab/xr
 
 ## 常见问题
 
-如果您的环境搭建失败，请先查阅[常见问题解答](./FAQ.md)。
+如果您的环境搭建失败，请先查阅[常见问题解答](./faq.md)。

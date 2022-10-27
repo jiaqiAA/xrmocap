@@ -93,16 +93,16 @@ python tools/process_smc.py \
 
 基于优化的方法使用匹配后多视角的 2d 关键点，借助三角化或其他方法可以生成 3d 关键点。以 [MVPose](../../configs/mvpose/) 为例，您可以通过以下步骤得到 3d 关键点。
 
-1. 下载数据和人体模型
+1. 数据和人体模型下载
 
-- 下载数据
+- 数据下载
 
 ```bash
 mkdir xrmocap_data
 wget https://openxrlab-share-mainland.oss-cn-hangzhou.aliyuncs.com/xrmocap/example_resources/Shelf_50.zip -P xrmocap_data
 cd xrmocap_data/ && unzip -q Shelf_50.zip && rm Shelf_50.zip && cd ..
 ```
-- 下载人体模型
+- 人体模型下载
 
 此部分配置文件的 `smplify` 为非空, 并且您将获得SMPL模型参数。请下载人体模型，具体步骤可参阅[人体模型下载说明](#人体模型下载)。
 
@@ -165,9 +165,9 @@ sh scripts/download_weight.sh
 
 #### 基于优化的方法
 
-1. 下载数据和人体模型
+1. 数据和人体模型下载
 
-- 下载 Shelf 数据集和 meta-data
+- Shelf 数据集和 meta-data 下载
 
 ```bash
 # download Shelf dataset (16G)
@@ -180,7 +180,7 @@ mkdir -p xrmocap_data/Shelf
 wget https://openxrlab-share-mainland.oss-cn-hangzhou.aliyuncs.com/xrmocap/xrmocap_meta/Shelf/xrmocap_meta_testset_fasterrcnn.zip -P xrmocap_data/Shelf
 cd xrmocap_data/Shelf && unzip xrmocap_meta_testset_fasterrcnn.zip && rm xrmocap_meta_testset_fasterrcnn.zip && cd ../..
 ```
-- 下载人体模型
+- 人体模型下载
 
 此部分配置文件的 `smplify` 为非空, 并且您将获得SMPL模型参数。请下载人体模型，具体步骤可参阅[人体模型下载说明](#人体模型下载)。
 

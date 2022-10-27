@@ -1,11 +1,11 @@
 # XRMoCap 简介
 
-本文件将介绍 XRmoCap 的框架设计和文件结构。
+XRmoCap 框架和文件结构介绍。
 
 
 ## 框架
 
-### 基于优化方法的框架
+### 基于优化的方法框架
 
 - 多目单人框架
 
@@ -13,9 +13,9 @@
 
 - 多目多人框架
 
-对于多目多人重建问题，主要有两个挑战。一是建立不同视角间人（或关键点）的对应关系，二是解决人与人之间的遮挡问题。为此，添加了两个模块，分别是匹配模块和跟踪模块。
+对于多目多人重建问题，主要有两个挑战。一是建立不同视角间人体（或关键点）的对应关系，二是解决人与人之间的遮挡问题。为此，添加匹配模块和跟踪模块。重建管线首先进行手动相机估计并逐帧检测 2d 关键点。然后对不同视角的 2d 关键点进行匹配，应用三角化和光束法平差 (Bundle adjustment) 优化相机参数和 3d 关键点，对于后续帧的 2d 关键点可利用跟踪算法得到匹配结果。最后，利用 3d 关键点拟合得到 SMPL 模型，进而得到由关节角和根轨迹表示的运动序列。
 
-### 基于学习方法的框架
+### 基于学习的方法框架
 
 describe the component of each module (as in the paper)
 
@@ -67,6 +67,3 @@ how to incorporate optimization and learning-based methods into one framework
     └── version.py               # digital version of XRMocap
 
 ```
-
-
-Usage of each module/folder
